@@ -2154,8 +2154,8 @@ valueExpression
     // The normalizedPredicate productions moved here to eliminate left mutual recursion.
     | valueExpression normalizedPredicatePart2                              #normalizedPredicateExprAlt
     // Boolean value expression included here.
-    | NOT valueExpression                                                   #notExprAlt
     | valueExpression IS NOT? truthValue                                    #isNotExprAlt
+    | NOT valueExpression                                                   #notExprAlt
     | valueExpression AND valueExpression                                   #conjunctiveExprAlt
     | valueExpression operator = (OR | XOR) valueExpression                 #disjunctiveExprAlt
     | PROPERTY? GRAPH graphExpression                                       #propertyGraphExprAlt
@@ -3102,7 +3102,7 @@ nonReservedWords
     | TO
     | TRAIL
     | TRANSACTION
-    | TYPE
+//    | TYPE
     | UNDIRECTED
     | VERTEX
     | WALK
