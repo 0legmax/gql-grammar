@@ -1000,8 +1000,11 @@ elementPatternFiller
     : elementVariableDeclaration? isLabelExpression? elementPatternPredicate?
     ;
 
+// NOTE249 — An <element variable declaration> containing TEMP is a
+// specification device and is not syntax available to the user.
 elementVariableDeclaration
-    : TEMP? elementVariable
+    //: TEMP? elementVariable
+    : elementVariable
     ;
 
 isLabelExpression
